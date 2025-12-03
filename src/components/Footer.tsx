@@ -1,4 +1,5 @@
-import { Cross, Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import logoImage from "@/assets/main.jpeg";  // <-- change to your actual logo image
 
 export const Footer = () => {
   return (
@@ -6,19 +7,28 @@ export const Footer = () => {
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-burgundy flex items-center justify-center">
-                <Cross className="w-6 h-6 text-gold" />
-              </div>
+              
+              {/* ⬇️ Replaced round cross icon with image */}
+              <img 
+                src={logoImage} 
+                alt="Christ The King Saskatoon"
+                className="w-12 h-12 object-cover rounded-full"
+              />
+
               <div>
                 <h3 className="font-heading text-lg font-semibold leading-tight">
                   Christ The King Saskatoon
                 </h3>
-                <p className="text-xs text-cream/70">Syro - Malabar Catholic Church</p>
+                <p className="text-xs text-cream/70">
+                  Syro - Malabar Catholic Church
+                </p>
               </div>
             </div>
+
             <p className="font-body text-sm text-cream/80 leading-relaxed">
               A spiritual home for the South Indian Catholic community and all 
               Saskatoon-area families since 2015.
@@ -103,6 +113,7 @@ export const Footer = () => {
               Follow us for updates on parish events and celebrations.
             </p>
           </div>
+
         </div>
       </div>
 
