@@ -24,9 +24,9 @@ export const Navbar = () => {
             </div>
             <div>
               <h1 className="font-heading text-lg font-semibold text-foreground leading-tight">
-                Christ The King
+                Christ The King Saskatoon
               </h1>
-              <p className="text-xs text-muted-foreground">Saskatoon</p>
+              <p className="text-xs text-muted-foreground">Syro - Malabar Catholic Church</p>
             </div>
           </a>
 
