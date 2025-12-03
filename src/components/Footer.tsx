@@ -14,9 +14,9 @@ export const Footer = () => {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-semibold leading-tight">
-                  Christ The King
+                  Christ The King Saskatoon
                 </h3>
-                <p className="text-xs text-cream/70">Saskatoon</p>
+                <p className="text-xs text-cream/70">Syro - Malabar Catholic Church</p>
               </div>
             </div>
             <p className="font-body text-sm text-cream/80 leading-relaxed">
