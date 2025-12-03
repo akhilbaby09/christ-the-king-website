@@ -8,7 +8,7 @@ import heroImage4 from "@/assets/main4.jpeg";
 import heroImage5 from "@/assets/main5.jpeg";
 
 export const HeroSection = () => {
-  const images = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
+  const images = [heroImage,heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
   const [currentImage, setCurrentImage] = useState(0);
 
   // Rotate images every 5 seconds
