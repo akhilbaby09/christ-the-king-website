@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
-import logoImage from "@/christtheking_edited_edited.jpg";  // <-- change to your actual logo image
+import logoImage from "@/assets/christtheking_edited_edited.jpg";  // <-- change to your actual logo image
 export const Footer = () => {
   return (
     <footer id="contact" className="bg-brown text-cream">
