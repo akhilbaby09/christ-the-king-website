@@ -58,14 +58,14 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+1234567890" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  Contact Parish Office
+                <a href="tel:+16399972752" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                  +16399972752
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:info@christthekingsaskatoon.ca" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  Email Us
+                <a href="mailto:christthekingsaskatoon@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                  christthekingsaskatoon@gmail.com
                 </a>
               </li>
             </ul>
