@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Cross } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+import logoImage from "@/assets/christtheking_edited_edited.jpg";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -17,16 +19,24 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-burgundy flex items-center justify-center">
-              <Cross className="w-6 h-6 text-gold" />
-            </div>
+
+            {/* ⬇️ Replaced the round Cross icon with an image */}
+            <img
+              src={logoImage}
+              alt="Christ The King Saskatoon"
+              className="w-12 h-12 object-cover rounded-full"
+            />
+
             <div>
               <h1 className="font-heading text-lg font-semibold text-foreground leading-tight">
                 Christ The King Saskatoon
               </h1>
-              <p className="text-xs text-muted-foreground">Syro - Malabar Catholic Church</p>
+              <p className="text-xs text-muted-foreground">
+                Syro - Malabar Catholic Church
+              </p>
             </div>
           </a>
 
@@ -46,7 +56,7 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
