@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+import heroImage from "@/assets/main.jpeg";
 import heroImage1 from "@/assets/main1.jpeg";
 import heroImage2 from "@/assets/main2.jpeg";
 import heroImage3 from "@/assets/main3.jpeg";
@@ -25,7 +26,7 @@ export const HeroSection = () => {
         <img
           src={images[currentImage]}
           alt="Christ The King Saskatoon church"
-          className="w-full h-full object-cover transition-opacity duration-1000"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
