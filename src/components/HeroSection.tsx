@@ -26,7 +26,7 @@ export const HeroSection = () => {
         <img
           src={images[currentImage]}
           alt="Christ The King Saskatoon church"
-          className="w-full h-full object-cover"
+      //    className="w-full h-full object-cover"
         />
        // <div className="absolute inset-0 bg-gradient-hero" />
       </div>
