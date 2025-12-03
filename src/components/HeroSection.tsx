@@ -1,14 +1,31 @@
-import heroImage from "@/assets/main.jpeg";
+import { useState, useEffect } from "react";
+
+import heroImage1 from "@/assets/main1.jpeg";
+import heroImage2 from "@/assets/main2.jpeg";
+import heroImage3 from "@/assets/main3.jpeg";
+import heroImage4 from "@/assets/main4.jpeg";
+import heroImage5 from "@/assets/main5.jpeg";
 
 export const HeroSection = () => {
+  const images = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // Rotate images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
-          alt="Christ The King Saskatoon church interior during mass"
-          className="w-full h-full object-cover"
+          src={images[currentImage]}
+          alt="Christ The King Saskatoon church"
+          className="w-full h-full object-cover transition-opacity duration-1000"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
@@ -27,9 +44,7 @@ export const HeroSection = () => {
           We are a strong, loving community where people come together to worship, grow, and support one another.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-delay-2">
-          <a href="#about" className="btn-hero">
-            Learn More
-          </a>
+          <a href="#about" className="btn-hero">Learn More</a>
           <a
             href="#contact"
             className="font-heading font-semibold px-8 py-4 rounded-sm border-2 border-cream/50 text-cream hover:bg-cream/10 transition-all duration-300"
