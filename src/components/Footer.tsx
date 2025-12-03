@@ -1,4 +1,5 @@
-import { Cross, Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import heroImage from "@/assets/christtheking_edited_edited.jpg";
 
 export const Footer = () => {
   return (
@@ -6,20 +7,26 @@ export const Footer = () => {
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
+          
+          {/* Brand with Image */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-burgundy flex items-center justify-center">
-                <Cross className="w-6 h-6 text-gold" />
-              </div>
+              {/* Church Image (replacing round icon) */}
+              <img
+                src={heroImage}
+                alt="Christ the King Saskatoon"
+                className="w-16 h-16 rounded-md object-cover"
+              />
+
               <div>
                 <h3 className="font-heading text-lg font-semibold leading-tight">
                   Christ The King Saskatoon
                 </h3>
-                <p className="text-xs text-cream/70">Syro - Malabar Catholic Church</p>
+                <p className="text-xs text-cream">Syro - Malabar Catholic Church</p>
               </div>
             </div>
-            <p className="font-body text-sm text-cream/80 leading-relaxed">
+
+            <p className="font-body text-sm text-cream leading-relaxed">
               A spiritual home for the South Indian Catholic community and all 
               Saskatoon-area families since 2015.
             </p>
@@ -35,7 +42,7 @@ export const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "-")}`}
-                    className="font-body text-sm text-cream/70 hover:text-gold transition-colors"
+                    className="font-body text-sm text-cream hover:text-gold transition-colors"
                   >
                     {link}
                   </a>
@@ -52,19 +59,22 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <span className="font-body text-sm text-cream/80">
+                <span className="font-body text-sm text-cream">
                   Saskatoon, Saskatchewan, Canada
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+1234567890" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                <a href="tel:+1234567890" className="font-body text-sm text-cream hover:text-gold transition-colors">
                   Contact Parish Office
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:info@christthekingsaskatoon.ca" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                <a
+                  href="mailto:info@christthekingsaskatoon.ca"
+                  className="font-body text-sm text-cream hover:text-gold transition-colors"
+                >
                   Email Us
                 </a>
               </li>
@@ -76,6 +86,7 @@ export const Footer = () => {
             <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-6 text-gold">
               Connect With Us
             </h4>
+
             <div className="flex gap-4 mb-8">
               <a
                 href="#"
@@ -99,7 +110,8 @@ export const Footer = () => {
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
-            <p className="font-body text-xs text-cream/60">
+
+            <p className="font-body text-xs text-cream">
               Follow us for updates on parish events and celebrations.
             </p>
           </div>
@@ -107,9 +119,9 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-cream/10">
+      <div className="border-t border-cream/20">
         <div className="container mx-auto px-4 py-6">
-          <p className="font-body text-xs text-cream/50 text-center">
+          <p className="font-body text-xs text-cream text-center">
             © {new Date().getFullYear()} Christ The King Saskatoon. All rights reserved.
           </p>
         </div>
