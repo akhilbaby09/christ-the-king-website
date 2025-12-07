@@ -1,11 +1,16 @@
 import { FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import parishForm from "@/assets/Parish-Registration-Form.pdf";
+import BaptismForm from "@/assets/Baptism-Registration-Form.pdf";
+import parishForm from "@/assets/forms/parish-registration.pdf";
 
 const forms = [
   {
     title: "Parish Registration Form",
     description: "Register as a new member of our parish family",
     icon: FileText,
+    file: parishForm,
+
   },
   {
     title: "Pre-Authorised Debit (PAD) Form",
@@ -16,6 +21,7 @@ const forms = [
     title: "Baptism Registration Form",
     description: "Register for the sacrament of Baptism",
     icon: FileText,
+   file: "/forms/Parish-Registration-Form.pdf",
   },
 ];
 
