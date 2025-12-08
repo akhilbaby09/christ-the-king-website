@@ -1,7 +1,10 @@
 import { FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+// Import PDF files
 import parishForm from "@/assets/Parish-Registration-Form.pdf";
 import BaptismForm from "@/assets/Baptism-Registration-Form.pdf";
+// import PadForm from "@/assets/PAD-Form.pdf"; // Uncomment when available
 
 const forms = [
   {
@@ -9,18 +12,18 @@ const forms = [
     description: "Register as a new member of our parish family",
     icon: FileText,
     file: parishForm,
-
   },
   {
-    title: "Pre-Authorised Debit (PAD) For",
+    title: "Pre-Authorised Debit (PAD) Form",
     description: "Set up automatic contributions to support our parish",
     icon: FileText,
+    file: null, // replace with PadForm when you have it
   },
   {
     title: "Baptism Registration Form",
     description: "Register for the sacrament of Baptism",
     icon: FileText,
-   file: BaptismForm,
+    file: BaptismForm,
   },
 ];
 
@@ -49,19 +52,36 @@ export const FormsSection = () => {
               <div className="w-16 h-16 rounded-full bg-burgundy/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-burgundy/20 transition-colors">
                 <form.icon className="w-8 h-8 text-burgundy" />
               </div>
+
               <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
                 {form.title}
               </h3>
+
               <p className="font-body text-sm text-muted-foreground mb-6">
                 {form.description}
               </p>
-              <Button
-                variant="outline"
-                className="border-burgundy text-burgundy hover:bg-burgundy hover:text-primary-foreground font-heading text-sm gap-2"
-              >
-                <Download className="w-4 h-4" />
-                Download
-              </Button>
+
+              {/* Download Button */}
+              {form.file ? (
+                <a href={form.file} download>
+                  <Button
+                    variant="outline"
+                    className="border-burgundy text-burgundy hover:bg-burgundy hover:text-primary-foreground font-heading text-sm gap-2"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download
+                  </Button>
+                </a>
+              ) : (
+                <Button
+                  variant="outline"
+                  disabled
+                  className="border-burgundy text-burgundy opacity-50 cursor-not-allowed font-heading text-sm gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Not Available
+                </Button>
+              )}
             </div>
           ))}
         </div>
