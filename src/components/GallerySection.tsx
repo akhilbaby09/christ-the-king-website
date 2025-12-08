@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// Import all gallery images from a folder automatically
 const importGallery = () => {
   const images = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", {
     eager: true,
@@ -8,12 +7,12 @@ const importGallery = () => {
   return Object.values(images).map((img) => img.default);
 };
 
-export const GallerySection = () => {
+export default function Gallery() {
   const photos = importGallery();
   const [selected, setSelected] = useState(null);
 
   return (
-    <section id="gallery" className="py-20 bg-muted/30">
+    <div className="pt-28 pb-20 bg-muted/30 min-h-screen">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -22,7 +21,7 @@ export const GallerySection = () => {
           </h2>
           <div className="section-divider mb-6" />
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            A glimpse into our parish community and events.
+            Explore memorable moments from our parish events.
           </p>
         </div>
 
@@ -57,6 +56,6 @@ export const GallerySection = () => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
-};
+}
