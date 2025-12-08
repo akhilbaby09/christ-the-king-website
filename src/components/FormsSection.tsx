@@ -12,7 +12,7 @@ const forms = [
 
   },
   {
-    title: "Pre-Authorised Debit (PAD) Form",
+    title: "Pre-Authorised Debit (PAD) For",
     description: "Set up automatic contributions to support our parish",
     icon: FileText,
   },
