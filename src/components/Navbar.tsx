@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Mission", href: "#mission" },
+  { name: "Gallery", href: "#gallery" }, // ⬅️ Added new Gallery tab
   { name: "Forms", href: "#forms" },
   { name: "Contact", href: "#contact" },
 ];
@@ -22,14 +23,11 @@ export const Navbar = () => {
 
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-
-            {/* ⬇️ Replaced the round Cross icon with an image */}
             <img
               src={logoImage}
               alt="Christ The King Saskatoon"
               className="w-12 h-12 object-cover rounded-full"
             />
-
             <div>
               <h1 className="font-heading text-lg font-semibold text-foreground leading-tight">
                 Christ The King Saskatoon
@@ -51,9 +49,6 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-burgundy hover:bg-burgundy-dark text-primary-foreground font-heading text-sm px-6">
-              Get In Touch
-            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -80,9 +75,6 @@ export const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="bg-burgundy hover:bg-burgundy-dark text-primary-foreground font-heading mt-2">
-                Get In Touch
-              </Button>
             </div>
           </div>
         )}
