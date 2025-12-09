@@ -45,3 +45,25 @@ export const AboutSection = () => {
           <p className="font-body text-foreground leading-relaxed">
             The first Syro-Malabar holy mass in Saskatoon was celebrated in June 2009 at
             St. Marys’ Church, Saskatoon. The first family prayer meeting was also started
+            in August 2013 at Thomas Valakkamattathil’s house. Since then, the family
+            prayer meeting rotated through families monthly. In Sep 2015 we started our
+            kids’ catechism once every month by Smino Varghese and Binu Jacob.
+            <br />
+            <br />
+            In September 2015 the Exarchate for Syro-Malabar in Canada was formed, and
+            Bishop Mar Jose Kalluvelil expressed his desire to visit Saskatoon. His visit
+            on 29th Nov 2015 was celebrated with a holy mass by the Bishop and Fr.
+            Raphael at St. Michaels church. During this visit, the Bishop officially
+            declared Saskatoon as a Syro-Malabar parish and named it *Christ The King*.
+            He also instructed us to celebrate two holy masses every month, which were
+            scheduled on the 2nd and 4th Sundays.
+          </p>
+
+          <blockquote className="border-l-4 border-gold pl-6 italic text-muted-foreground">
+            "We're always happy to see you and warmly welcome visitors."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  );
+};
