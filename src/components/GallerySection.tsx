@@ -1,15 +1,28 @@
 import { useState } from "react";
 
-const importGallery = () => {
-  const images = import.meta.glob("@/assets/*.{jpg,jpeg,png,webp}", {
+// Auto-detect album folders and images
+const importAlbums = () => {
+  const files = import.meta.glob("@/assets/*.{jpg,jpeg,png,webp}", {
     eager: true,
   });
-  return Object.values(images).map((img) => img.default);
+
+  const albums = {};
+
+  Object.entries(files).forEach(([path, module]) => {
+    const parts = path.split("/");
+    const albumName = parts[parts.length - 2]; // parent folder (album)
+
+    if (!albums[albumName]) albums[albumName] = [];
+    albums[albumName].push(module.default);
+  });
+
+  return albums;
 };
 
 export default function Gallery() {
-  const photos = importGallery();
-  const [selected, setSelected] = useState(null);
+  const albums = importAlbums();
+  const [activeAlbum, setActiveAlbum] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div className="pt-28 pb-20 bg-muted/30 min-h-screen">
@@ -25,32 +38,63 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {photos.map((src, index) => (
-            <div
-              key={index}
-              onClick={() => setSelected(src)}
-              className="cursor-pointer group relative"
-            >
-              <img
-                src={src}
-                alt={`Gallery ${index + 1}`}
-                className="rounded-lg shadow-md object-cover w-full h-40 md:h-48 group-hover:opacity-80 transition"
-              />
-            </div>
-          ))}
-        </div>
+        {/* Album List */}
+        {!activeAlbum && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.keys(albums).map((album) => (
+              <div
+                key={album}
+                className="bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition"
+                onClick={() => setActiveAlbum(album)}
+              >
+                <h3 className="font-heading text-xl font-semibold text-center mb-2">
+                  {album}
+                </h3>
+                <p className="text-center text-muted-foreground mb-3">
+                  {albums[album].length} Photos
+                </p>
+                <img
+                  src={albums[album][0]} // show first image as album cover
+                  className="rounded-lg h-40 w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
-        {/* Popup Lightbox */}
-        {selected && (
+        {/* Album Images Grid */}
+        {activeAlbum && (
+          <>
+            <button
+              onClick={() => setActiveAlbum(null)}
+              className="mb-6 px-4 py-2 bg-primary text-white rounded"
+            >
+              ← Back to Albums
+            </button>
+
+            <h3 className="font-heading text-2xl font-bold mb-6">{activeAlbum}</h3>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {albums[activeAlbum].map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  className="rounded-lg cursor-pointer shadow group-hover:opacity-80 transition object-cover w-full h-40 md:h-48"
+                  onClick={() => setSelectedImage(src)}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Lightbox */}
+        {selectedImage && (
           <div
             className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-            onClick={() => setSelected(null)}
+            onClick={() => setSelectedImage(null)}
           >
             <img
-              src={selected}
-              alt="Selected"
+              src={selectedImage}
               className="max-w-[90%] max-h-[90%] rounded-lg shadow-xl"
             />
           </div>
