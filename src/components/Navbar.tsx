@@ -5,7 +5,7 @@ import logoImage from "@/assets/christtheking_edited_edited.jpg";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
-  { name: "Mass Time", href: "/#massTime" },
+  { name: "Mass Time", href: "/#masstime" },
   { name: "Gallery", href: "/gallery" },   // ⬅️ Gallery is now a PAGE
   { name: "Forms", href: "/#forms" },
   { name: "Contact", href: "/#contact" },
