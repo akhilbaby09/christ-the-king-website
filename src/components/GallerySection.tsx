@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const importGallery = () => {
-  const images = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", {
+  const images = import.meta.glob("@/assets/*.{jpg,jpeg,png,webp}", {
     eager: true,
   });
   return Object.values(images).map((img) => img.default);
