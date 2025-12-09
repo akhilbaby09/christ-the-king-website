@@ -1,6 +1,6 @@
 export const MissionSection = () => {
   return (
-    <section id="mission" className="py-20 bg-burgundy relative overflow-hidden">
+    <section id="masstime" className="py-20 bg-burgundy relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         
         {/* Header */}
