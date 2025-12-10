@@ -2,27 +2,27 @@ import { useState } from "react";
 
 // Auto-detect album folders and images
 const importAlbums = () => {
-  const files = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", {
+  const files = import.meta.glob("@/assets/gallery/**/*.{jpg,jpeg,png,webp}", {
     eager: true,
   });
 
-  const albums = {};
+  const albums: Record<string, string[]> = {};
 
   Object.entries(files).forEach(([path, module]) => {
     const parts = path.split("/");
     const albumName = parts[parts.length - 2]; // parent folder (album)
 
     if (!albums[albumName]) albums[albumName] = [];
-    albums[albumName].push(module.default);
+    albums[albumName].push((module as any).default);
   });
 
   return albums;
 };
 
-export default function Gallery() {
+export default function GalleryPage() {
   const albums = importAlbums();
-  const [activeAlbum, setActiveAlbum] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [activeAlbum, setActiveAlbum] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="pt-28 pb-20 bg-muted/30 min-h-screen">
@@ -50,13 +50,21 @@ export default function Gallery() {
                 <h3 className="font-heading text-xl font-semibold text-center mb-2">
                   {album}
                 </h3>
+
                 <p className="text-center text-muted-foreground mb-3">
                   {albums[album].length} Photos
                 </p>
-                <img
-                  src={albums[album][0]} // show first image as album cover
-                  className="rounded-lg h-40 w-full object-cover"
-                />
+
+                {albums[album][0] ? (
+                  <img
+                    src={albums[album][0]} // Album cover
+                    className="rounded-lg h-40 w-full object-cover"
+                  />
+                ) : (
+                  <div className="h-40 bg-gray-200 rounded-lg flex items-center justify-center">
+                    No Images
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -79,7 +87,7 @@ export default function Gallery() {
                 <img
                   key={index}
                   src={src}
-                  className="rounded-lg cursor-pointer shadow group-hover:opacity-80 transition object-cover w-full h-40 md:h-48"
+                  className="rounded-lg cursor-pointer shadow transition object-cover w-full h-40 md:h-48"
                   onClick={() => setSelectedImage(src)}
                 />
               ))}
