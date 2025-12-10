@@ -1,3 +1,4 @@
+// src/pages/gallery.tsx
 import { useState } from "react";
 
 // Auto-detect album folders and images
@@ -104,6 +105,7 @@ export default function GalleryPage() {
             <img
               src={selectedImage}
               className="max-w-[90%] max-h-[90%] rounded-lg shadow-xl"
+              onClick={(e) => e.stopPropagation()} // FIX: Prevent click on image from closing lightbox
             />
           </div>
         )}
