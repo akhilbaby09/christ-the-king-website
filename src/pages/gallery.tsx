@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Auto-detect album folders and images
 const importAlbums = () => {
-  const files = import.meta.glob("@/assets/*.{jpg,jpeg,png,webp}", {
+  const files = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", {
     eager: true,
   });
 
