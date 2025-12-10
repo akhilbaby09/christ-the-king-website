@@ -25,7 +25,7 @@ export const MissionSection = () => {
               href="https://www.google.com/maps?q=Unit+22,+202+McKague+Cres,+Saskatoon,+SK+S7R+0L8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold underline hover:text-cream text-sm inline-block mb-4"
+              className="text-cream/80 hover:text-gold text-sm inline-block mb-4 underline"
             >
               Unit 22, 202 McKague Cres, Saskatoon, SK S7R 0L8
             </a>
@@ -49,7 +49,7 @@ export const MissionSection = () => {
               href="https://www.google.com/maps?q=18+33rd+St+E,+Saskatoon,+SK+S7K+0R7"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold underline hover:text-cream text-sm inline-block mb-4"
+              className="text-cream/80 hover:text-gold text-sm inline-block mb-4 underline"
             >
               18 33rd St E, Saskatoon, SK S7K 0R7
             </a>
