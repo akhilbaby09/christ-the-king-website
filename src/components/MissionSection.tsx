@@ -16,9 +16,20 @@ export const MissionSection = () => {
 
           {/* Mission House */}
           <div className="bg-cream/10 backdrop-blur-sm rounded-lg p-6 border border-cream/20">
-            <h3 className="font-heading text-xl font-semibold mb-4 text-gold">
+            <h3 className="font-heading text-xl font-semibold mb-1 text-gold">
               Mission House
             </h3>
+
+            {/* Google Link */}
+            <a
+              href="https://www.google.com/maps?q=Unit+22,+202+McKague+Cres,+Saskatoon,+SK+S7R+0L8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline hover:text-cream text-sm inline-block mb-4"
+            >
+              Unit 22, 202 McKague Cres, Saskatoon, SK S7R 0L8
+            </a>
+
             <ul className="space-y-2 font-body text-cream/80">
               <li>Monday — 9:30 AM</li>
               <li>Tuesday — 6:00 PM</li>
@@ -29,9 +40,20 @@ export const MissionSection = () => {
 
           {/* St Michael's Church */}
           <div className="bg-cream/10 backdrop-blur-sm rounded-lg p-6 border border-cream/20">
-            <h3 className="font-heading text-xl font-semibold mb-4 text-gold">
+            <h3 className="font-heading text-xl font-semibold mb-1 text-gold">
               St Michael's Church
             </h3>
+
+            {/* Google Link */}
+            <a
+              href="https://www.google.com/maps?q=18+33rd+St+E,+Saskatoon,+SK+S7K+0R7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline hover:text-cream text-sm inline-block mb-4"
+            >
+              18 33rd St E, Saskatoon, SK S7K 0R7
+            </a>
+
             <ul className="space-y-2 font-body text-cream/80">
               <li>Thursday — 6:00 PM</li>
               <li>Friday — 6:00 PM</li>
