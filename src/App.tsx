@@ -3,9 +3,10 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Gallery from "./src/pages/gallery";  // <-- add this
+import GalleryPage from "./pages/gallery";   // ✅ ADD THIS
 
 const queryClient = new QueryClient();
 
@@ -17,7 +18,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/gallery" element={<Gallery />} />   {/* NEW ROUTE */}
+
+          {/* ✅ ADD THIS ROUTE */}
+          <Route path="/gallery" element={<GalleryPage />} />
+
+          {/* Leave this last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
