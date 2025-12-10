@@ -16,7 +16,7 @@ export const MissionSection = () => {
 
           {/* Mission House */}
           <div className="bg-cream/10 backdrop-blur-sm rounded-lg p-6 border border-cream/20">
-            <h3 className="font-heading text-xl font-semibold mb-1 text-gold">
+            <h3 className="font-heading text-xl font-semibold mb-1 text-cream">
               Mission House
             </h3>
 
@@ -40,7 +40,7 @@ export const MissionSection = () => {
 
           {/* St Michael's Church */}
           <div className="bg-cream/10 backdrop-blur-sm rounded-lg p-6 border border-cream/20">
-            <h3 className="font-heading text-xl font-semibold mb-1 text-gold">
+            <h3 className="font-heading text-xl font-semibold mb-1 text-cream">
               St Michael's Church
             </h3>
 
@@ -56,14 +56,3 @@ export const MissionSection = () => {
 
             <ul className="space-y-2 font-body text-cream/80">
               <li>Thursday — 6:00 PM</li>
-              <li>Friday — 6:00 PM</li>
-              <li>Saturday — 9:30 AM</li>
-              <li>Sunday — 5:30 PM</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
-};
