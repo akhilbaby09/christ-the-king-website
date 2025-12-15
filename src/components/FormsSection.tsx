@@ -2,9 +2,11 @@ import { FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Import PDF files
-import parishForm from "@/assets/Parish-Registration-Form.pdf";
-import BaptismForm from "@/assets/Baptism-Registration-Form.pdf";
-// import PadForm from "@/assets/PAD-Form.pdf"; // Uncomment when available
+import parishForm from "@/assets/documents/Parish-Registration-Form.pdf";
+import BaptismForm from "@/assets/documents/Baptism-Registration-Form.pdf";
+import PADForm from "@/assets/documents/Pre-Authorized-Form.pdf";
+
+
 
 const forms = [
   {
@@ -17,7 +19,7 @@ const forms = [
     title: "Pre-Authorised Debit (PAD) Form",
     description: "Set up automatic contributions to support our parish",
     icon: FileText,
-    file: null, // replace with PadForm when you have it
+    file: PADForm, // replace with PadForm when you have it
   },
   {
     title: "Baptism Registration Form",
@@ -79,7 +81,7 @@ export const FormsSection = () => {
                   className="border-burgundy text-burgundy opacity-50 cursor-not-allowed font-heading text-sm gap-2"
                 >
                   <Download className="w-4 h-4" />
-                  Not Available
+                  Download
                 </Button>
               )}
             </div>
