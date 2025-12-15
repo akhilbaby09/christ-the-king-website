@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -21,6 +21,7 @@ export const Gallery = () => {
   );
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [api, setApi] = useState<any>();
 
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
@@ -29,6 +30,13 @@ export const Gallery = () => {
   const closeLightbox = () => {
     setSelectedImageIndex(null);
   };
+
+  // Scroll to the selected image when the carousel is initialized
+  useEffect(() => {
+    if (api && selectedImageIndex !== null) {
+      api.scrollTo(selectedImageIndex);
+    }
+  }, [api, selectedImageIndex]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -66,9 +74,9 @@ export const Gallery = () => {
           {selectedImageIndex !== null && (
             <Carousel
               opts={{
-                startIndex: selectedImageIndex,
                 loop: true,
               }}
+              setApi={setApi}
               className="w-full"
             >
               <CarouselContent>
