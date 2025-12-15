@@ -3,7 +3,7 @@ import { useState } from "react";
 export const Gallery = () => {
   const [images] = useState(
     Object.values(
-      import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", { eager: true })
+      import.meta.glob("@/assets/gallery/**/*.{jpg,jpeg,png,webp}", { eager: true })
     ).map((img: any) => img.default)
   );
 
