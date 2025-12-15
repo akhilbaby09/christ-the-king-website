@@ -5,6 +5,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import {
   Dialog,
@@ -14,14 +15,14 @@ import {
 import { Navbar } from "@/components/Navbar";
 
 export const Gallery = () => {
-  const [images] = useState(
+  const [images] = useState<string[]>(
     Object.values(
       import.meta.glob("@/assets/gallery/**/*.{jpg,jpeg,png,webp}", { eager: true })
-    ).map((img: any) => img.default)
+    ).map((img: { default: string }) => img.default)
   );
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
-  const [api, setApi] = useState<any>();
+  const [api, setApi] = useState<CarouselApi>();
 
   const openLightbox = (index: number) => {
     setSelectedImageIndex(index);
