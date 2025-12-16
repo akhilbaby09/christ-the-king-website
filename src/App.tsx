@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import GalleryPage from "./pages/gallery";  
-import ParishPatrons from "./pages/parish-patrons"; 
+import ParishPatrons from "./pages/parishpatrons"; 
 
 
 const queryClient = new QueryClient();
@@ -24,7 +24,7 @@ const App = () => (
       
           <Route path="/gallery" element={<GalleryPage />} />
 
-        <Route path="/parish-patrons" element={<ParishPatrons />} />  
+        <Route path="/parishpatrons" element={<ParishPatrons />} />  
 
           {/* Leave this last */}
           <Route path="*" element={<NotFound />} />
