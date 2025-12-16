@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import GalleryPage from "./pages/gallery";   // ✅ ADD THIS
+import GalleryPage from "./pages/gallery";  
+import ParishPatrons from "./pages/parish-patrons"; 
+
 
 const queryClient = new QueryClient();
 
@@ -19,8 +21,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
 
-          {/* ✅ ADD THIS ROUTE */}
+      
           <Route path="/gallery" element={<GalleryPage />} />
+
+        <Route path="/parish-patrons" element={<ParishPatrons />} />  
 
           {/* Leave this last */}
           <Route path="*" element={<NotFound />} />
