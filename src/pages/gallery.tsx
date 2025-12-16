@@ -44,7 +44,9 @@ export const Gallery = () => {
     );
   }, []);
 
-  const albumNames = Object.keys(albums);
+ const albumNames = Object.keys(albums)
+  .filter((name) => /^\d{4}$/.test(name))
+  .sort((a, b) => Number(b) - Number(a));
 
   const [activeAlbum, setActiveAlbum] = useState<string | null>(
     albumNames[0] ?? null
