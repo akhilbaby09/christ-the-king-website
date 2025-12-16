@@ -7,6 +7,7 @@ const navLinks = [
   { name: "About", href: "/#about" },
   { name: "Mass Time", href: "/#masstime" },
   { name: "Gallery", href: "/gallery" },
+ { name: "Parish Patrons", href: "/parishpatrons" },
   { name: "Forms", href: "/#forms" },
   { name: "Contact", href: "/#contact" },
 ];
