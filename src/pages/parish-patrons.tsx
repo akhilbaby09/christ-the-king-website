@@ -22,9 +22,6 @@ const ParishPatrons: React.FC = () => {
           </div>
 
           <div className="mt-4 text-sm text-slate-600">
-            <p>
-              Image source: <code>src/assets/parish-patrons/patrons.jpg</code>
-            </p>
           </div>
         </section>
       </div>
