@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "@/components/Navbar";
 import patronsImg from "@/assets/parish-patrons/patrons.jpg";
 
 const ParishPatrons: React.FC = () => {
