@@ -40,7 +40,7 @@ export const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Our Mission", "Parish Forms", "Contact"].map((link) => (
+              {["Home", "About Us", "Mass Time", "Parish Forms", "Contact"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "-")}`}
