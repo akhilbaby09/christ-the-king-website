@@ -1,4 +1,17 @@
-import React from "react";
+import { useState, useEffect, useMemo } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Navbar } from "@/components/Navbar";
 import patronsImg from "@/assets/parish-patrons/patrons.jpg";
 
