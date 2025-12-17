@@ -43,7 +43,7 @@ export const Footer = () => {
               {["Home", "About Us", "Mass Time", "Parish Forms", "Contact"].map((link) => (
                 <li key={link}>
                   <a
-                    href={`#${link.toLowerCase().replace(" ", "-")}`}
+                    href={`${link.toLowerCase().replace(" ", "")}`}
                     className="font-body text-sm text-cream/70 hover:text-gold transition-colors"
                   >
                     {link}
