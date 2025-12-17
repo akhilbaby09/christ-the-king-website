@@ -4,12 +4,12 @@ import logoImage from "@/assets/christtheking_edited_edited.jpg";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
-  { name: "Mass Time", href: "/#masstime" },
+  { name: "About Us", href: "/about" },
+  { name: "Mass Time", href: "/masstime" },
   { name: "Gallery", href: "/gallery" },
  { name: "Parish Patrons", href: "/parish-patrons" },
-  { name: "Forms", href: "/#forms" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Forms", href: "/forms" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
