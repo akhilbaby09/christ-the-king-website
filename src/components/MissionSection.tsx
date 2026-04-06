@@ -5,7 +5,7 @@ export const MissionSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-cream mb-4">
-            Mass will be celebrated on Sundays only until further notice, as Fr. John is out of the country.
+            This Week Mass Schedule
           </h2>
           <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6" />
         </div>
