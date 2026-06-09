@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar";
-import patronsImg from "@/assets/parish-patrons/patrons.jpg";
+import patronsImg from "@/assets/parish-patrons/parishCouncilMembersNew.jpg";
 
 const ParishPatrons: React.FC = () => {
   return (
