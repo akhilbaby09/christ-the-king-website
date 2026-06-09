@@ -26,7 +26,7 @@ export const MissionSection = () => {
               rel="noopener noreferrer"
               className="text-cream hover:text-gold text-sm inline-block mb-4 underline"
             >
-              Unit 22, 202 McKague Cres, Saskatoon, SK S7R 0L8
+              Unit 24, 202 McKague Cres, Saskatoon, SK S7R 0L8
             </a>
 
             {/* Timings */}
@@ -34,7 +34,7 @@ export const MissionSection = () => {
               <li>Monday — 9:30 AM</li>
               <li>Tuesday — 6:00 PM</li>
               <li>Wednesday — 6:00 PM</li>
-              <li>Sunday — 11:00 AM</li>
+             
             </ul>
           </div>
 
@@ -59,7 +59,7 @@ export const MissionSection = () => {
               <li>Thursday — 6:00 PM</li>
               <li>Friday — 6:00 PM</li>
               <li>Saturday — 9:30 AM</li>
-              <li>Sunday — 5:30 PM</li>
+              <li>Sunday — 5:00 PM From June to Sept</li>
             </ul>
           </div>
 
