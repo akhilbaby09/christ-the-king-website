@@ -76,6 +76,7 @@ export const Footer = () => {
                 <a href="mailto:christthekingsaskatoonpaster@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
                   christthekingsaskatoonpaster@gmail.com
                 </a>
+                </li>
                 <a href="mailto:christthekingdonation@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
                   christthekingdonation@gmail.com
                 </a>
