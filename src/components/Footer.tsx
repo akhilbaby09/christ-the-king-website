@@ -67,14 +67,17 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+16399972752" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                <a href="tel:+16479733838" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
                   +16399972752
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:christthekingsaskatoon@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  christthekingsaskatoon@gmail.com
+                <a href="mailto:christthekingsaskatoonpaster@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                  christthekingsaskatoonpaster@gmail.com
+                </a>
+                <a href="mailto:christthekingdonation@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
+                  christthekingdonation@gmail.com
                 </a>
               </li>
             </ul>
