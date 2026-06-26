@@ -52,37 +52,51 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
+        {/* Contact Info */}
+<div>
+  <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-6 text-gold">
+    Contact Us
+  </h4>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-6 text-gold">
-              Contact Us
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <span className="font-body text-sm text-cream/80">
-                  Saskatoon, Saskatchewan, Canada
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+16479733838" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  +16399972752
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:christthekingsaskatoonpaster@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  christthekingsaskatoonpaster@gmail.com
-                </a>
-                </li>
-                <a href="mailto:christthekingdonation@gmail.com" className="font-body text-sm text-cream/80 hover:text-gold transition-colors">
-                  christthekingdonation@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
+  <ul className="space-y-4">
+    <li className="flex items-start gap-3">
+      <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+      <span className="font-body text-sm text-cream/80">
+        Saskatoon, Saskatchewan, Canada
+      </span>
+    </li>
+
+    <li className="flex items-center gap-3">
+      <Phone className="w-5 h-5 text-gold flex-shrink-0" />
+      <a
+        href="tel:+16399972752"
+        className="font-body text-sm text-cream/80 hover:text-gold transition-colors"
+      >
+        +1 (639) 997-2752
+      </a>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+
+      <div className="flex flex-col space-y-1">
+        <a
+          href="mailto:christthekingsaskatoonpaster@gmail.com"
+          className="font-body text-sm text-cream/80 hover:text-gold transition-colors break-all"
+        >
+          christthekingsaskatoonpaster@gmail.com
+        </a>
+
+        <a
+          href="mailto:christthekingdonation@gmail.com"
+          className="font-body text-sm text-cream/80 hover:text-gold transition-colors break-all"
+        >
+          christthekingdonation@gmail.com
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
 
           {/* Social & Mass Times */}
           <div>
