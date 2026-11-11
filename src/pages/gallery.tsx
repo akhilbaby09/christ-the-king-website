@@ -84,7 +84,7 @@ export const Gallery = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">Gallery</h1>
           <p className="text-muted-foreground">
-            Explore our collection of memories..
+            Explore our collection of memories
           </p>
         </div>
 
