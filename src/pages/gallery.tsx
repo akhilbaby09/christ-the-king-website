@@ -19,7 +19,7 @@ export const Gallery = () => {
   const albums = useMemo(() => {
     // `modules` keys are the matched path strings, values are module objects (eager)
     const modules = import.meta.glob(
-      "@/assets/gallery/**/*.{jpg,jpeg,png,webp}",
+      "@/assets/gallery/**/*.{jpg,JPG,jpeg,png,webp}",
       { eager: true }
     ) as Record<string, any>;
 
